@@ -1,0 +1,15 @@
+<h3>Exercicio 01 - Calcular IMC</h3>
+
+<label>Informe a altura:</label>
+<input type="number" placeholder="Informe a altura" [(ngModel)]="altura"/><br>
+
+<label>Informe o peso:</label>
+<input type="number" placeholder="Informe o peso" [(ngModel)]="peso"/><br>
+
+<button (click)="calcular()">Calcular</button>
+
+<p ngClass="{{style}}">
+  Resultado: {{calculo}}!
+  {{classificacao}}
+</p>
+<hr>

@@ -1,0 +1,19 @@
+<h3>Exercicio 03 - Calculadora</h3><br><br>
+
+<input type="number" placeholder="Número 01" [(ngModel)]="n1"/><br><br>
+<input type="number" placeholder="Número 02" [(ngModel)]="n2"/><br><br>
+
+<label for="oper">Operação</label><br>
+<select name="oper" id="oper" [(ngModel)]="oper">
+  <option value="soma">Adição</option>
+  <option value="subt">Subtração</option>
+  <option value="mult">Multiplicação</option>
+  <option value="divi">Divisão</option>
+</select><br><br>
+
+<button (click)="calcular()">Calcular</button><br>
+<button (click)="limpar()">Limpar</button><br><br>
+
+<p>
+  Resultado: {{result}}
+</p>

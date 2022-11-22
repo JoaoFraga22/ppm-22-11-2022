@@ -1,0 +1,15 @@
+<h3>Exercicio 02 - Lista de tarefas</h3><br><br>
+
+<label for="novaTarefa">Tarefa:</label>
+<input type="text" name="novaTarefa" #newItem placeholder="Descrição da tarefa"
+       (keyup.enter)="insere(newItem.value); newItem.value = ''" id="novaTarefa"/>
+<button (click)="insere(newItem.value); newItem.value = ''">Novo</button><br />
+
+<ul>
+    <li *ngFor="let item of itens; let i =index">
+        <p [ngClass]="item.done == true ? 'done' : 'notDone'" (click)="altera(i)">
+            {{item.description}}
+            <button (click)="remove(i)">Excluir</button>
+        </p>
+    </li>
+</ul>
